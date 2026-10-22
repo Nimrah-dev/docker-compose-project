@@ -61,7 +61,7 @@ Browser --> frontend (nginx) --> backend (Express) --> mongo (MongoDB)
 **Prerequisites:** Docker with Docker Compose v2 (`docker compose version`).
 
 ```bash
-git clone https://github.com/<your-username>/mern-notes-docker.git
+git clone https://github.com/Nimrah-dev/docker-compose-project.git
 cd mern-notes-docker
 
 # create the .env file with a random password (see .env.example)
@@ -145,8 +145,8 @@ docker compose exec mongo sh -c 'mongosh -u "$MONGO_INITDB_ROOT_USERNAME" -p "$M
 Pre-built images are available on Docker Hub:
 
 ```bash
-docker pull <dockerhub-username>/notes-backend:1.0
-docker pull <dockerhub-username>/notes-frontend:1.0
+docker pull nimrahsaif/notes-backend:1.0
+docker pull nimrahsaif/notes-frontend:1.0
 ```
 
 For development, `compose.yaml` uses `build:` so changes are built from source. A machine that only needs to run the app can use `image:` entries instead, and needs just a compose file and a `.env`, with no source code.
