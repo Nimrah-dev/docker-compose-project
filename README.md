@@ -2,7 +2,7 @@
 
 A small notes app (React, Express, MongoDB) packaged as three containers and started with a single `docker compose up`. The app itself is simple on purpose. The focus of this repository is the container setup: Dockerfiles, an nginx reverse proxy, network segmentation, an authenticated database with credentials kept in `.env`, a persistent volume, and health checks.
 
-![Notes app](Screenshots/d-notes1.jpeg)
+![Notes app](docker-compose-project/Screenshots/d-notes1.jpeg)
 
 ## Architecture
 
