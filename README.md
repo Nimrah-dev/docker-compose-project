@@ -62,7 +62,7 @@ Browser --> frontend (nginx) --> backend (Express) --> mongo (MongoDB)
 
 ```bash
 git clone https://github.com/Nimrah-dev/docker-compose-project.git
-cd mern-notes-docker
+cd docker-compose-project
 
 # create the .env file with a random password (see .env.example)
 echo "MONGO_ROOT_USER=notesadmin" > .env
@@ -147,6 +147,11 @@ Pre-built images are available on Docker Hub:
 ```bash
 docker pull nimrahsaif/notes-backend:1.0
 docker pull nimrahsaif/notes-frontend:1.0
+```
+To run the published images without building (only `compose.deploy.yaml` and a `.env` are needed):
+
+```bash
+docker compose -f compose.deploy.yaml up -d
 ```
 
 For development, `compose.yaml` uses `build:` so changes are built from source. A machine that only needs to run the app can use `image:` entries instead, and needs just a compose file and a `.env`, with no source code.
